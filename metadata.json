@@ -1,0 +1,6 @@
+{
+  "name": "INDIANREELS",
+  "description": "Premium short-form video platform with advanced social features, AI autopilot, and proximity-based experiences.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": []
+}
