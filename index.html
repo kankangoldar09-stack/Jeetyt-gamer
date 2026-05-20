@@ -1,13 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>INDIANREELS</title>
+    <style>
+        /* Reset and Full Screen Layout */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Text copy aur select ko completely block karne ke liye */
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        .app-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .web-app-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;"> <div class="app-container">
+        <iframe 
+            src="https://app-af2z7g8d924h-vitesandbox.sandbox.medo.dev"
+" 
+            class="web-app-frame" 
+            allow="autoplay; encrypted-media; fullscreen"
+            id="appFrame">
+        </iframe>
+    </div>
+
+    <script>
+        // Security Logic: Keyboard Shortcuts (F12, Ctrl+C, Ctrl+Shift+I, Ctrl+U) block karne ke liye
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode == 123) {
+                e.preventDefault();
+                return false;
+            }
+            if (e.ctrlKey && (e.shiftKey && (e.keyCode == 73 || e.keyCode == 74) || e.keyCode == 85 || e.keyCode == 67 || e.keyCode == 83)) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Mobile long-press copy disable
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</body>
+</html>
